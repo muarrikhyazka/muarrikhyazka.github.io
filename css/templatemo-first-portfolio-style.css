@@ -46,6 +46,50 @@ body {
     font-family: var(--body-font-family); 
 }
 
+/*---------------------------------------
+  CAROUSEL             
+-----------------------------------------*/
+
+/* Hero Carousel */
+/* #template-mo-zay-hero-carousel { background: #efefef !important;}
+/* Accordion */
+/* .templatemo-accordion a { color: #000;}
+.templatemo-accordion a:hover { color: #333d4a;}  */
+
+/* Carousel Hero */
+#template-mo-zay-hero-carousel .carousel-indicators li {
+  margin-top: -50px;
+  background-color: var(--secondary-color);
+}
+#template-mo-zay-hero-carousel .carousel-control-next i,
+#template-mo-zay-hero-carousel .carousel-control-prev i {
+  color: #59ab6e !important;
+  font-size: 2.8em !important;
+}
+
+/* @media (min-width: 576px) {
+  .tempaltemo-carousel .h1 { font-size: 1em !important;}
+} */
+
+/*// Medium devices (tablets, 768px and up)*/
+/* @media (min-width: 768px) {
+  #templatemo_main_nav .navbar-nav {max-width: 450px;}
+ } */
+
+/* Large devices (desktops, 992px and up)*/
+/* @media (min-width: 992px) {
+  #templatemo_main_nav .navbar-nav {max-width: 550px;}
+  #template-mo-zay-hero-carousel .carousel-item {min-height: 30rem !important;}
+  .product-wap .h3, .product-wap li, .product-wap i, .product-wap p {font-size: 18px !important;}
+  .product-wap .product-color-dot {
+    width: 12px;
+    height: 12px;
+  }
+} */
+
+/* Extra large devices (large desktops, 1200px and up)*/
+/* @media (min-width: 1200px) {} */
+
 
 /*---------------------------------------
   TYPOGRAPHY               
@@ -601,6 +645,9 @@ strong {
 .featured-border-start {
   border-left: 1px solid var(--border-color);
 }
+
+.text-success { color: var(--primary-color) !important;}
+
 
 
 /*---------------------------------------
@@ -1184,4 +1231,5 @@ strong {
     min-width: inherit;
   }
 }
+
 
