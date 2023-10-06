@@ -62,7 +62,7 @@
         </div>
         <div class="row align-items-center">
           <div class="col-md-12 col-lg-7 mb-5">
-            <a href="#"><img src="images/azure/azure-0.jpg" alt="Image placeholder" class="img-fluid rounded"></a>
+            <img src="images/azure/azure-0.jpg" alt="Image placeholder" class="img-fluid rounded">
           </div>
           <div class="col-md-12 col-lg-5 text-center pl-md-5">
             <p>First of all, we should create a data lake using storage account in Azure. You can type it on search bar on top. Just leave any configuration in default, you only change the region which near with you.</p>
@@ -71,7 +71,7 @@
         </div>
         <div class="row align-items-center">
           <div class="col-md-12 col-lg-7 mb-5">
-            <a href="#"><img src="images/azure/azure-01.jpg" alt="Image placeholder" class="img-fluid rounded"></a>
+            <img src="images/azure/azure-01.jpg" alt="Image placeholder" class="img-fluid rounded">
           </div>
           <div class="col-md-12 col-lg-5 text-center pl-md-5">
             <p>Create container and directory folder</p>
@@ -80,64 +80,92 @@
         </div>
         <div class="row align-items-center">
           <div class="col-md-12 col-lg-7 mb-5">
-            <a href="#"><img src="images/azure/azure-3.jpg" alt="Image placeholder" class="img-fluid rounded"></a>
+            <img src="images/azure/azure-02.jpg" alt="Image placeholder" class="img-fluid rounded">
           </div>
           <div class="col-md-12 col-lg-5 text-center pl-md-5">
-            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quisquam iste dolor accusantium facere corporis ipsum animi deleniti fugiat. Ex, veniam?</p>
+            <p>Next, we should create azure data factory. Its same with the way we create storage account. Make sure the region is same with storage account region. I will make azure data factory short with adf.</p>
 
           </div>
         </div>
         <div class="row align-items-center">
           <div class="col-md-12 col-lg-7 mb-5">
-            <a href="#"><img src="images/azure/azure-4.jpg" alt="Image placeholder" class="img-fluid rounded"></a>
+            <img src="images/azure/azure-03.jpg" alt="Image placeholder" class="img-fluid rounded">
           </div>
           <div class="col-md-12 col-lg-5 text-center pl-md-5">
-            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quisquam iste dolor accusantium facere corporis ipsum animi deleniti fugiat. Ex, veniam?</p>
+            <p>Launch Azure Data Factory Studio. Choose azure active directory, subscription, and adf.</p>
 
           </div>
         </div>
         <div class="row align-items-center">
           <div class="col-md-12 col-lg-7 mb-5">
-            <a href="#"><img src="images/azure/azure-5.jpg" alt="Image placeholder" class="img-fluid rounded"></a>
+            <img src="images/azure/azure-04.jpg" alt="Image placeholder" class="img-fluid rounded">
           </div>
           <div class="col-md-12 col-lg-5 text-center pl-md-5">
-            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quisquam iste dolor accusantium facere corporis ipsum animi deleniti fugiat. Ex, veniam?</p>
+            <p>Click Author menu on the left side. Click plus (+) icon and choose pipeline.</p>
+
+          </div>
+        </div>
+        
+        <div class="row align-items-center">
+          <div class="col-md-12 col-lg-7 mb-5">
+            <img src="images/azure/azure-2.jpg" alt="Image placeholder" class="img-fluid rounded">
+          </div>
+          <div class="col-md-12 col-lg-5 text-center pl-md-5">
+            <p>Basically pipeline that we need is migrating the data from external server into our data lake. Lets move to the steps. Find 'copy data' on activity bar, click and drag it into the workspace. Complete any configurations on the bottom side. Store the data on our container inside raw-data folder. After that click Publish All on blue button.</p>
 
           </div>
         </div>
         <div class="row align-items-center">
           <div class="col-md-12 col-lg-7 mb-5">
-            <a href="#"><img src="images/azure/azure-6.jpg" alt="Image placeholder" class="img-fluid rounded"></a>
+            <img src="images/azure/azure-3.jpg" alt="Image placeholder" class="img-fluid rounded">
           </div>
           <div class="col-md-12 col-lg-5 text-center pl-md-5">
-            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quisquam iste dolor accusantium facere corporis ipsum animi deleniti fugiat. Ex, veniam?</p>
+            <p>We have done the pipeline. Next, we should set schedule when this pipeline running. You can set it on add trigger button > New/Edit. Because I only need to run it one time, so I just use Trigger Now feature to run the pipeline once at rigth now.</p>
 
           </div>
         </div>
         <div class="row align-items-center">
           <div class="col-md-12 col-lg-7 mb-5">
-            <a href="#"><img src="images/azure/azure-7.jpg" alt="Image placeholder" class="img-fluid rounded"></a>
+            <img src="images/azure/azure-6.jpg" alt="Image placeholder" class="img-fluid rounded">
           </div>
           <div class="col-md-12 col-lg-5 text-center pl-md-5">
-            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quisquam iste dolor accusantium facere corporis ipsum animi deleniti fugiat. Ex, veniam?</p>
+            <p>Voila! We can see the data that we need now is already on our data lake storage, it means the pipeline running succesfully.</p>
 
           </div>
         </div>
         <div class="row align-items-center">
           <div class="col-md-12 col-lg-7 mb-5">
-            <a href="#"><img src="images/azure/azure-8.jpg" alt="Image placeholder" class="img-fluid rounded"></a>
+            <img src="images/azure/azure-8.jpg" alt="Image placeholder" class="img-fluid rounded">
           </div>
           <div class="col-md-12 col-lg-5 text-center pl-md-5">
-            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quisquam iste dolor accusantium facere corporis ipsum animi deleniti fugiat. Ex, veniam?</p>
+            <p>Next phase, we will do transformation using Azure Databricks. First, we should create databricks. Its same with the way we create storage account and adf. Just make sure it has the same region as well.</p>
 
           </div>
         </div>
         <div class="row align-items-center">
           <div class="col-md-12 col-lg-7 mb-5">
-            <a href="#"><img src="images/azure/azure-9.jpg" alt="Image placeholder" class="img-fluid rounded"></a>
+            <img src="images/azure/azure-8.jpg" alt="Image placeholder" class="img-fluid rounded">
           </div>
           <div class="col-md-12 col-lg-5 text-center pl-md-5">
-            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quisquam iste dolor accusantium facere corporis ipsum animi deleniti fugiat. Ex, veniam?</p>
+            <p>Next phase, we will do transformation using Azure Databricks. First, we should create databricks. Its same with the way we create storage account and adf. Just make sure it has the same region as well.</p>
+
+          </div>
+        </div>
+        <div class="row align-items-center">
+          <div class="col-md-12 col-lg-7 mb-5">
+            <img src="images/azure/azure-8.jpg" alt="Image placeholder" class="img-fluid rounded">
+          </div>
+          <div class="col-md-12 col-lg-5 text-center pl-md-5">
+            <p>Next phase, we will do transformation using Azure Databricks. First, we should create databricks. Its same with the way we create storage account and adf. Just make sure it has the same region as well.</p>
+
+          </div>
+        </div>
+        <div class="row align-items-center">
+          <div class="col-md-12 col-lg-7 mb-5">
+            <img src="images/azure/azure-8.jpg" alt="Image placeholder" class="img-fluid rounded">
+          </div>
+          <div class="col-md-12 col-lg-5 text-center pl-md-5">
+            <p>Next phase, we will do transformation using Azure Databricks. First, we should create databricks. Its same with the way we create storage account and adf. Just make sure it has the same region as well.</p>
 
           </div>
         </div>
