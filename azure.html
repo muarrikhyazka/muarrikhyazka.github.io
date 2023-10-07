@@ -54,10 +54,10 @@
             <img src="images/azure/Azure Architecture.jpg" alt="Image placeholder" class="img-fluid rounded">
           </div>
           <div class="col-md-12 col-lg-5 text-center pl-md-5">
-            <h2><a href="#">50% less in all items</a></h2>
-            <p class="post-meta mb-4">By <a href="#">Carl Smith</a> <span class="block-8-sep">&bullet;</span> September 3, 2018</p>
-            <p>want to put Monkeypox Data into a good data warehouse and data pipelineLorem ipsum dolor sit amet, consectetur adipisicing elit. Quisquam iste dolor accusantium facere corporis ipsum animi deleniti fugiat. Ex, veniam?</p>
-            <p><a href="#" class="btn btn-primary btn-sm">Shop Now</a></p>
+            
+           
+            <p>The goal is want to put Monkeypox Data into a good data warehouse and data pipeline. Here on the left side is the architecture. We take the data from Outworld in Data, here is the link https://github.com/owid/monkeypox/blob/main/owid-monkeypox-data.csv . Actually, Azure Data Factory, Azure Databricks, and Azure Synapse Analytics can replace each other, but in this case just want to use all of these to give a clear picture of each tools/resources.</p>
+
           </div>
         </div>
         <div class="row align-items-center">
@@ -169,6 +169,206 @@
 
           </div>
         </div>
+        <div class="row align-items-center">
+          <div class="col-md-12 col-lg-7 mb-5">
+            <img src="images/azure/azure-16.jpg" alt="Image placeholder" class="img-fluid rounded">
+          </div>
+          <div class="col-md-12 col-lg-5 text-center pl-md-5">
+            <p>Go to the app resource that we've created. On overview tab, there are some information that we need to keep, you can save it on notepad or your code editor, just copy paste. The information that need to kepp are Application (client) ID and Directory (tenant) ID. One important thing, we should grant access to this app on Storage Account and Azure Databricks as well.</p>
+
+          </div>
+        </div>
+        <div class="row align-items-center">
+          <div class="col-md-12 col-lg-7 mb-5">
+            <img src="images/azure/azure-17.jpg" alt="Image placeholder" class="img-fluid rounded">
+          </div>
+          <div class="col-md-12 col-lg-5 text-center pl-md-5">
+            <p>Stil on app, move to Certificates & secrets tab. In here we will create secret key, just name it secretkey on description and leave other configuration as default.</p>
+
+          </div>
+        </div>
+        <div class="row align-items-center">
+          <div class="col-md-12 col-lg-7 mb-5">
+            <img src="images/azure/azure-19.jpg" alt="Image placeholder" class="img-fluid rounded">
+          </div>
+          <div class="col-md-12 col-lg-5 text-center pl-md-5">
+            <p>After secret key created, save the secret ID and paste it on notepad or code editor.</p>
+
+          </div>
+        </div>
+
+        <div class="row align-items-center">
+          <div class="col-md-12 col-lg-7 mb-5">
+            <img src="images/azure/azure-20.jpg" alt="Image placeholder" class="img-fluid rounded">
+          </div>
+          <div class="col-md-12 col-lg-5 text-center pl-md-5">
+            <p>We will use all information that we've saved on databricks. But everyone who can access databricks can see that sensitive information if we only hardcode it on the notebook. So we need to secure that sensitive information and also we need to able to use that information in our notebook. For that objective, we need one resource/service that provided by Azure called Key Vault.</p>
+
+          </div>
+        </div>
+        <div class="row align-items-center">
+          <div class="col-md-12 col-lg-7 mb-5">
+            <img src="images/azure/azure-21.jpg" alt="Image placeholder" class="img-fluid rounded">
+          </div>
+          <div class="col-md-12 col-lg-5 text-center pl-md-5">
+            <p>First, we should create Key Vault resource. Its same with the way we create storage account, adf, and databrticks. Just make sure it has the same region as well. After that we create a key vault, just leave any configuration as default.</p>
+
+          </div>
+        </div>
+        <div class="row align-items-center">
+          <div class="col-md-12 col-lg-7 mb-5">
+            <img src="images/azure/azure-23.jpg" alt="Image placeholder" class="img-fluid rounded">
+          </div>
+          <div class="col-md-12 col-lg-5 text-center pl-md-5">
+            <p>Keep Vault URI and Directory ID on your notepad or code editor, it will be needed in the future.</p>
+
+          </div>
+        </div>
+        <div class="row align-items-center">
+          <div class="col-md-12 col-lg-7 mb-5">
+            <img src="images/azure/azure-24.jpg" alt="Image placeholder" class="img-fluid rounded">
+          </div>
+          <div class="col-md-12 col-lg-5 text-center pl-md-5">
+            <p>Move to Access Control (IAM) tab. Grant your access as Key Vault Administrator and app that we've created previously as Contributor.</p>
+
+          </div>
+        </div>
+        <div class="row align-items-center">
+          <div class="col-md-12 col-lg-7 mb-5">
+            <img src="images/azure/azure-33.jpg" alt="Image placeholder" class="img-fluid rounded">
+          </div>
+          <div class="col-md-12 col-lg-5 text-center pl-md-5">
+            <p>Move to Access Policies tab. Grant Key Permissions to the app and Secret Permissions to Azure Databricks.</p>
+
+          </div>
+        </div>
+        <div class="row align-items-center">
+          <div class="col-md-12 col-lg-7 mb-5">
+            <img src="images/azure/azure-25.jpg" alt="Image placeholder" class="img-fluid rounded">
+          </div>
+          <div class="col-md-12 col-lg-5 text-center pl-md-5">
+            <p>Move to secret tab and create it. Name it up to you and put any key and id on your notepad or code editor on secret value box.</p>
+
+          </div>
+        </div>
+        <div class="row align-items-center">
+          <div class="col-md-12 col-lg-7 mb-5">
+            <img src="images/azure/azure-26.jpg" alt="Image placeholder" class="img-fluid rounded">
+          </div>
+          <div class="col-md-12 col-lg-5 text-center pl-md-5">
+            <p>We should make it one by one until 3 secrets created there.</p>
+
+          </div>
+        </div>
+        <div class="row align-items-center">
+          <div class="col-md-12 col-lg-7 mb-5">
+            <img src="images/azure/azure-27.jpg" alt="Image placeholder" class="img-fluid rounded">
+          </div>
+          <div class="col-md-12 col-lg-5 text-center pl-md-5">
+            <p>Next, we need to make connection between Key Vault and Azure Databricks. Go to https://{your databricks link}#secrets/createScope. Name it up to you and put the code/informatrion from key vault. Put the Vault URI code into DNS Name box and Directory ID into Resource ID box. Click Create button then.</p>
+
+          </div>
+        </div>
+        <div class="row align-items-center">
+          <div class="col-md-12 col-lg-7 mb-5">
+            <img src="images/azure/azure-29.jpg" alt="Image placeholder" class="img-fluid rounded">
+          </div>
+          <div class="col-md-12 col-lg-5 text-center pl-md-5">
+            <p>Go back to workspace and create notebook. Type all code. dbutils.secrets.get(scope={put your scope name that we've created on databricks}, key={put your secret description/name on key vault}). Those command to take the credential that we've put on Key Vault Secret. All these code run to build mount/connection between Azure Databricks-App-Storage Account.</p>
+
+          </div>
+        </div>
+        <div class="row align-items-center">
+          <div class="col-md-12 col-lg-7 mb-5">
+            <img src="images/azure/azure-34.jpg" alt="Image placeholder" class="img-fluid rounded">
+          </div>
+          <div class="col-md-12 col-lg-5 text-center pl-md-5">
+            <p>After mounting succesfully built. We can read any data from storage account here, these are the code to read the data using spark. Actually in here I do some transformations such as adjust data type and fill empty values.</p>
+
+          </div>
+        </div>
+        <div class="row align-items-center">
+          <div class="col-md-12 col-lg-7 mb-5">
+            <img src="images/azure/azure-341.jpg" alt="Image placeholder" class="img-fluid rounded">
+          </div>
+          <div class="col-md-12 col-lg-5 text-center pl-md-5">
+            <p>After some transformations, we store the data into storage account but different directory with the raw data.</p>
+
+          </div>
+        </div>
+        <div class="row align-items-center">
+          <div class="col-md-12 col-lg-7 mb-5">
+            <img src="images/azure/azure-36.jpg" alt="Image placeholder" class="img-fluid rounded">
+          </div>
+          <div class="col-md-12 col-lg-5 text-center pl-md-5">
+            <p>Here is the result on storage account. Data exported from spark is always contained with other files as well. Our data is on file named 'part...'. It can be multiple file depends on the partition configuration on spark.</p>
+
+          </div>
+        </div>
+        <div class="row align-items-center">
+          <div class="col-md-12 col-lg-7 mb-5">
+            <img src="images/azure/azure-37.jpg" alt="Image placeholder" class="img-fluid rounded">
+          </div>
+          <div class="col-md-12 col-lg-5 text-center pl-md-5">
+            <p>Azure Synapse Analytics have same function with Azure Data Factory plus some Data wrangling and analytics function. We will create Azure SYnapse Analytics workspace for the next phase. Make sure have the same region with other esource.</p>
+
+          </div>
+        </div>
+        <div class="row align-items-center">
+          <div class="col-md-12 col-lg-7 mb-5">
+            <img src="images/azure/azure-38.jpg" alt="Image placeholder" class="img-fluid rounded">
+          </div>
+          <div class="col-md-12 col-lg-5 text-center pl-md-5">
+            <p>After Azure Synapse Analytics workspace created, on Overview tab click Open Synapse Studio. It will redirect you to new tab.</p>
+
+          </div>
+        </div>
+        <div class="row align-items-center">
+          <div class="col-md-12 col-lg-7 mb-5">
+            <img src="images/azure/azure-39.jpg" alt="Image placeholder" class="img-fluid rounded">
+          </div>
+          <div class="col-md-12 col-lg-5 text-center pl-md-5">
+            <p>Basically it has the same UI with Azure Data Factory. Click plus icon and create external table from data lake.</p>
+
+          </div>
+        </div>
+        <div class="row align-items-center">
+          <div class="col-md-12 col-lg-7 mb-5">
+            <img src="images/azure/azure-40.jpg" alt="Image placeholder" class="img-fluid rounded">
+          </div>
+          <div class="col-md-12 col-lg-5 text-center pl-md-5">
+            <p>Put table name up to you. On linked service and input file or folder box bring it to your storage account which is used to store spark exported data.</p>
+
+          </div>
+        </div>
+        <div class="row align-items-center">
+          <div class="col-md-12 col-lg-7 mb-5">
+            <img src="images/azure/azure-41.jpg" alt="Image placeholder" class="img-fluid rounded">
+          </div>
+          <div class="col-md-12 col-lg-5 text-center pl-md-5">
+            <p>Azure Synapse Analytics will automatically read the data with its right data type.</p>
+
+          </div>
+        </div>
+        <div class="row align-items-center">
+          <div class="col-md-12 col-lg-7 mb-5">
+            <img src="images/azure/azure-42.jpg" alt="Image placeholder" class="img-fluid rounded">
+          </div>
+          <div class="col-md-12 col-lg-5 text-center pl-md-5">
+            <p>You can run SQL Script here.</p>
+
+          </div>
+        </div>
+        <div class="row align-items-center">
+          <div class="col-md-12 col-lg-7 mb-5">
+            <img src="images/azure/azure-44.jpg" alt="Image placeholder" class="img-fluid rounded">
+          </div>
+          <div class="col-md-12 col-lg-5 text-center pl-md-5">
+            <p>You can build chart as well here. Azure Synapse Analytics is a perfect and easy tool to wrangling and explore the data. Actually from here you can consume the data and bring it to any visualization platforms such as Power BI, Tablea, Looker, etc.</p>
+
+          </div>
+        </div>
+
       </div>
     </div>
 
@@ -179,18 +379,8 @@
     
     <footer class="site-footer border-top">
       <div class="container">
-        <div class="row text-center">
         
-          
-          <div class="col-md-6 col-lg-12">
-            
-            
-            <h3 class="footer-heading mb-4">Feel free to reach out</h3>
-            <a href="mailto:muarrikhyazka@gmail.com">muarrikhyazka@gmail.com</a>
-
-          </div>
-        </div>
-        <div class="row pt-5 mt-5 text-center">
+        <div class="row text-center">
           <div class="col-md-12">
             <p>
             <!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
