@@ -593,6 +593,10 @@ a {
     color: #ef4da0; }
   .block-5 ul li.address:before {
     content: "\e8b4"; }
+  .block-5 ul li.github:before {
+    content: "\f09b"; }
+  .block-5 ul li.leetcode:before {
+    content: "\f121"; }
   .block-5 ul li.email:before {
     content: "\f0e0"; }
   .block-5 ul li.phone:before {
