@@ -683,6 +683,13 @@ main {
     font-weight: 500;
 }
 
+.project-links {
+    display: flex;
+    gap: 8px;
+    margin-top: 10px;
+    flex-wrap: wrap;
+}
+
 .project-link {
     display: inline-flex;
     align-items: center;
@@ -694,10 +701,23 @@ main {
     padding: 8px 16px;
     border-radius: 25px;
     border: 2px solid transparent;
+    flex: 1;
+    min-width: 120px;
+    justify-content: center;
+}
+
+.demo-link {
+    color: #d97706;
 }
 
 .project-link:hover {
     background: linear-gradient(135deg, #4ade80, #22c55e);
+    color: white;
+    transform: translateY(-2px);
+}
+
+.demo-link:hover {
+    background: linear-gradient(135deg, #f59e0b, #d97706);
     color: white;
     transform: translateY(-2px);
 }
