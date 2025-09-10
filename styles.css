@@ -705,9 +705,6 @@ main {
     padding: 8px 16px;
     border-radius: 25px;
     border: 2px solid transparent;
-    flex: 1;
-    min-width: 120px;
-    justify-content: center;
 }
 
 .demo-link {
